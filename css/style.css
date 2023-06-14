@@ -1,0 +1,15 @@
+table, td, th {
+  border: 1px solid rgb(192, 128, 64);
+  }
+table {
+  margin: 1rem;
+}
+td, th {
+  padding: 1rem;
+}
+th {
+  font-weight: bold;
+}
+tfoot {
+  background-color: rgba(192, 128, 64, 0.2);
+  }
