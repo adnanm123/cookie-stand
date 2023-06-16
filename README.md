@@ -2,4 +2,4 @@
 
 ## Lighthouse Accessibility report
 
-![Lighthouse report](img/lighthousereport.png)
+![Lighthouse report](img/LightHouseReport.png)

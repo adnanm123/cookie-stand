@@ -52,6 +52,7 @@ footer p {
   text-align: center;
 }
 
+ /* CSS styles for the table */
 table, td, th {
   border: 1px solid rgb(192, 128, 64);
   }
@@ -67,3 +68,54 @@ th {
 tfoot {
   background-color: rgba(192, 128, 64, 0.2);
   }
+
+  /* CSS styles for the form */
+#form {
+  margin-bottom: 20px;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#form input[type="text"],
+#form input[type="number"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+#form input[type="text"]:focus,
+#form input[type="number"]:focus {
+  border-color: #4CAF50;
+}
+
+#form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
