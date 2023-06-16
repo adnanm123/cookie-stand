@@ -44,18 +44,18 @@ CookieSalmon.prototype.calculateCookiesPerHour = function() {
 CookieSalmon.prototype.render = function() {
   this.calculateCookiesPerHour();
   const row = document.createElement('tr');
-  const locationCell = document.createElement('th');
-  locationCell.textContent = this.location;
-  row.appendChild(locationCell);
+  let th = document.createElement('th');
+  th.textContent = this.location;
+  row.appendChild(th);
   tBody.appendChild(row);
   for(let i = 0; i < hours.length; i++) {
-    const cell = document.createElement('td');
-    cell.textContent = this.cookiesSoldPerHour[i];
-    row.appendChild(cell);
+    th = document.createElement('td');
+    th.textContent = this.cookiesSoldPerHour[i];
+    row.appendChild(th);
   }
-  const totalCell = document.createElement('td');
-  totalCell.textContent = this.totalCookiesSoldPerDay;
-  row.appendChild(totalCell);
+  th = document.createElement('td');
+  th.textContent = this.totalCookiesSoldPerDay;
+  row.appendChild(th);
   tableElement.appendChild(tBody);
 };
 
@@ -116,3 +116,25 @@ new CookieSalmon('Lima', 2, 16, 4.6);
   }
   renderFooter();
 })();
+
+// Form
+let form = document.getElementById('form');
+function handleSubmit(event) {
+  event.preventDefault();
+  let storeLocation = event.target.storeLocation.value;
+  let minNumberOfCookies = parseInt(event.target.minNumberOfCookies.value);
+  let maxNumberOfCookies = parseInt(event.target.maxNumberOfCookies.value);
+  let avgNumberOfCookies = parseFloat(event.target.avgNumberOfCookies.value);
+
+  let newLocation = new CookieSalmon(storeLocation, minNumberOfCookies, maxNumberOfCookies, avgNumberOfCookies);
+  newLocation.render();
+
+  tFoot.innerHTML = '';
+  renderFooter();
+
+  event.target.storeLocation.value = null;
+  event.target.minNumberOfCookies.value = null;
+  event.target.maxNumberOfCookies.value = null;
+  event.target.avgNumberOfCookies.value = null;
+}
+form.addEventListener('submit', handleSubmit);
