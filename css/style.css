@@ -1,4 +1,6 @@
-body {
+body{
+  background-color: lightblue;
+  color: #333; /* Dark gray or black text color */
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
@@ -7,6 +9,13 @@ body {
 header {
   background-color: #f0f0f0;
   padding: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  background-color: #f0f0f0; 
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 nav ul {
@@ -26,6 +35,10 @@ main {
   padding: 20px;
 }
 
+img {
+  margin-top: 15px;
+}
+
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -34,7 +47,7 @@ main {
 
 .footer-info {
   flex-basis: 25%;
-  text-align: left;
+  text-align: center;
 }
 
 .footer-links {
@@ -43,7 +56,9 @@ main {
 }
 
 footer {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; 
+  color: #333;
+  font-family: 'Courier New', Courier, monospace;
   padding: 20px;
   margin-top: 20px;
 }
@@ -53,40 +68,53 @@ footer p {
 }
 
  /* CSS styles for the table */
-table, td, th {
-  border: 1px solid rgb(192, 128, 64);
-  }
-table {
-  margin: 1rem;
-}
-td, th {
-  padding: 1rem;
-}
-th {
-  font-weight: bold;
-}
-tfoot {
-  background-color: rgba(192, 128, 64, 0.2);
-  }
-
-  /* CSS styles for the form */
+ table,
+ td,
+ th {
+   border: 1px solid rgb(192, 128, 64);
+ }
+ 
+ table {
+   margin: 1rem;
+   background-color: #f0f0f0;
+ }
+ 
+ td,
+ th {
+   padding: 1rem;
+   color: black;
+ }
+ 
+ th {
+   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ tfoot {
+   background-color: rgba(192, 128, 64, 0.2);
+ }
+ 
+ /* Form styles */
 #form {
   margin-bottom: 20px;
   max-width: 400px;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #form label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
+  color: #333;
 }
 
 #form input[type="text"],
-#form input[type="number"] {
+#form input[type="number"],
+#form textarea {
   margin-bottom: 10px;
   padding: 10px;
   width: 100%;
@@ -96,8 +124,13 @@ tfoot {
 }
 
 #form input[type="text"]:focus,
-#form input[type="number"]:focus {
+#form input[type="number"]:focus,
+#form textarea:focus {
   border-color: #4CAF50;
+}
+
+#form textarea {
+  resize: vertical;
 }
 
 #form input[type="submit"] {
